@@ -1,0 +1,20 @@
+{
+  "name": "discord-adventcalendar-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "lint": "biome check src",
+    "format": "biome check src --write",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test --watch=false",
+    "cli": "bun run src/cli.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@cloudflare/workers-types": "^4.20250307.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.101.0"
+  }
+}

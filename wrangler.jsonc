@@ -1,0 +1,16 @@
+{
+  "name": "discord-adventcalendar-bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-12-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "triggers": {
+    "crons": ["0 23 * * *"]
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "RSS_FEED_URL": "https://qiita.com/advent-calendar/2025/tuat/feed"
+  }
+}
