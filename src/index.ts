@@ -1,6 +1,6 @@
 export interface Env {
 	DISCORD_WEBHOOK_URL: string;
-	RSS_FEED_URL?: string;
+	RSS_FEED_URL: string;
 	DRY_RUN?: string;
 }
 
@@ -43,9 +43,6 @@ export async function runOnce(
 	options: ProcessOptions = {},
 ) {
 	const feedUrl = env.RSS_FEED_URL;
-	if (!feedUrl) {
-		throw new Error("RSS_FEED_URL is not configured");
-	}
 
 	const feedText = options.feedTextOverride ?? (await fetchRss(feedUrl));
 	const items = parseRss(feedText);
